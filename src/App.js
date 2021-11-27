@@ -6,7 +6,7 @@ function App() {
     <>
       <Profile
         img={data.avatar}
-        name={data.username}
+        username={data.username}
         tag={data.tag}
         location={data.location}
         followers={data.stats.followers}
