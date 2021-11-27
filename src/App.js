@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Profile from './components/Profile/Profile';
+import data from './data/user.json';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React Test text
-        </a>
-      </header>
-    </div>
+    <>
+      <Profile
+        img={data.avatar}
+        name={data.username}
+        tag={data.tag}
+        location={data.location}
+        followers={data.stats.followers}
+        views={data.stats.views}
+        likes={data.stats.likes}
+      />
+    </>
   );
 }
 
