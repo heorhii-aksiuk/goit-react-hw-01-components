@@ -1,30 +1,28 @@
 import ReactDOM from 'react-dom';
 import data from './data/user.json';
 
-const { avatar, username, tag, location, stats } = data;
-
-function Profile(props) {
+function Profile({ img, username, tag, location, followers, views, likes }) {
   return (
     <div className="profile">
       <div className="description">
-        <img src={props.img} alt="User avatar" className="avatar" />
-        <p className="name">{props.username}</p>
-        <p className="tag">@{props.tag}</p>
-        <p className="location">{props.location}</p>
+        <img src={img} alt="User avatar" className="avatar" />
+        <p className="name">{username}</p>
+        <p className="tag">@{tag}</p>
+        <p className="location">{location}</p>
       </div>
 
       <ul className="stats">
         <li>
           <span className="label">Followers</span>
-          <span className="quantity">{props.followers}</span>
+          <span className="quantity">{followers}</span>
         </li>
         <li>
           <span className="label">Views</span>
-          <span className="quantity">{props.views}</span>
+          <span className="quantity">{views}</span>
         </li>
         <li>
           <span className="label">Likes</span>
-          <span className="quantity">{props.likes}</span>
+          <span className="quantity">{likes}</span>
         </li>
       </ul>
     </div>
@@ -33,13 +31,13 @@ function Profile(props) {
 
 ReactDOM.render(
   <Profile
-    img={avatar}
-    name={username}
-    tag={tag}
-    location={location}
-    followers={stats.followers}
-    views={stats.views}
-    likes={stats.likes}
+    img={data.avatar}
+    name={data.username}
+    tag={data.tag}
+    location={data.location}
+    followers={data.stats.followers}
+    views={data.stats.views}
+    likes={data.stats.likes}
   />,
   document.querySelector('#root'),
 );
