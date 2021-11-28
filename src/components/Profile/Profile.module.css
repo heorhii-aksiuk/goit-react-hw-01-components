@@ -1,5 +1,6 @@
 .profile {
   margin: 0 auto;
+  margin-bottom: 20px;
   width: 300px;
   height: 400px;
   background-color: var(--main-background-color);
