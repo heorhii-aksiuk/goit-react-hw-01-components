@@ -1,3 +1,13 @@
+:root {
+  --main-font: 'Roboto', sans-serif;
+  --main-text-color: #212121;
+  --secondary-text-color: #808080;
+  --body-background-color: #d9dae0;
+  --main-background-color: #ffffff;
+  --secondary-background-color: #eeeeee;
+  --boarder-color: #e0e0e0;
+}
+
 h1,
 h2,
 h3,
@@ -24,12 +34,12 @@ img {
 }
 
 a {
-  color: #000000;
+  color: var(--main-text-color);
   text-decoration: none;
 }
 
 body {
-  /* font-family: */
-  color: #000000;
-  background-color: #ffffff;
+  font-family: var(--main-font);
+  color: var(--main-text-color);
+  background-color: var(--body-background-color);
 }
