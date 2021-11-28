@@ -1,21 +1,24 @@
-import data from './data/user.json';
+import userData from './data/user.json';
+import statData from './data/statistic.json';
+import Container from './components/Container/Container';
 import Profile from './components/Profile/Profile';
-import Section from './components/Section/Section';
+import Statistic from './components/Statistic/Statistic';
 
 function App() {
   return (
     <>
-      <Section>
+      <Container>
         <Profile
-          img={data.avatar}
-          username={data.username}
-          tag={data.tag}
-          location={data.location}
-          followers={data.stats.followers}
-          views={data.stats.views}
-          likes={data.stats.likes}
+          img={userData.avatar}
+          username={userData.username}
+          tag={userData.tag}
+          location={userData.location}
+          followers={userData.stats.followers}
+          views={userData.stats.views}
+          likes={userData.stats.likes}
         />
-      </Section>
+        <Statistic items={statData}></Statistic>
+      </Container>
     </>
   );
 }
