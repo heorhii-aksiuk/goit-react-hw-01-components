@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 
-function Statistic({ items }) {
+function Statistic({ title, stats }) {
   return (
     <section className="statistics">
-      <h2 className="title">Upload stats</h2>
+      <h2 className="title">{title}</h2>
       <ul className="stat-list">
-        {items.map(item => (
-          <li key={item.id} className="item">
-            <span className="label">{item.label}</span>
-            <span className="percentage">{item.percentage}%</span>
+        {stats.map(stat => (
+          <li key={stat.id} className="stat">
+            <span className="label">{stat.label}</span>
+            <span className="percentage">{stat.percentage}%</span>
           </li>
         ))}
       </ul>
@@ -17,11 +17,12 @@ function Statistic({ items }) {
 }
 
 Statistic.propTypes = {
-  items: PropTypes.arrayOf(
+  stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
     }),
   ),
+  title: PropTypes.string,
 };
 
 export default Statistic;
