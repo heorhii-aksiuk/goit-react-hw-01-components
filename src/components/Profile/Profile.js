@@ -13,7 +13,7 @@ function Profile({
   return (
     <div className="profile">
       <div className="description">
-        <img src={img} alt="User avatar" className="avatar" />
+        <img src={img ?? defaultAvatar} alt="User avatar" className="avatar" />
         <p className="name">{username}</p>
         <p className="tag">@{tag}</p>
         <p className="location">{location}</p>
