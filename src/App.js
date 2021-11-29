@@ -3,6 +3,7 @@ import statsData from './data/statistic.json';
 import Container from './components/Container/Container';
 import Profile from './components/Profile/Profile';
 import Statistic from './components/Statistic/Statistic';
+import './App.css';
 
 function App() {
   return (
