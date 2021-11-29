@@ -6,6 +6,8 @@
   --main-background-color: #ffffff;
   --secondary-background-color: #eeeeee;
   --boarder-color: #e0e0e0;
+  --online-color: #00e239;
+  --offline-color: #ff0000;
 }
 
 h1,

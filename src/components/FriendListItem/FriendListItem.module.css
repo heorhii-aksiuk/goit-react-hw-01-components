@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  padding: 10px 20px;
+}
+
+.status {
+  margin-right: 10px;
+  height: 60px;
+  width: 15px;
+  height: 15px;
+
+  align-self: center;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.online {
+  background-color: var(--online-color);
+}
+
+.offline {
+  background-color: var(--offline-color);
+}
+
+.avatar {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.name {
+  align-self: center;
+  font-weight: 500;
+}
