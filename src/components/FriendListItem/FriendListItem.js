@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import s from './FriendListItem.module.css';
 
 function FriendListItem({ id, avatar, name, isOnline }) {
-  console.log(id);
   return (
     <div className={s.container}>
       <span
