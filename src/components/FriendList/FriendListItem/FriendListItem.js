@@ -3,7 +3,7 @@ import s from './FriendListItem.module.css';
 
 function FriendListItem({ avatar, name, isOnline }) {
   return (
-    <div className={s.container}>
+    <li className={s.item}>
       <span
         className={
           isOnline ? `${s.status} ${s.online}` : `${s.status} ${s.offline}`
@@ -13,7 +13,7 @@ function FriendListItem({ avatar, name, isOnline }) {
       </span>
       <img className={s.avatar} src={avatar} alt="User avatar" width="48" />
       <p className={s.name}>{name}</p>
-    </div>
+    </li>
   );
 }
 
